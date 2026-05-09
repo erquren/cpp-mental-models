@@ -7,7 +7,9 @@
 
 [中文版](README.md) | English
 
-This repository contains code examples from my YouTube and Bilibili coding knowledge sharing videos.
+Cpp-Mental-Models is a modular C/C++ learning repository designed to explain core language and system-level mechanisms through runnable examples, physical analogies, and a global CMake build system.
+
+It covers memory layout, move semantics, smart pointers, static and dynamic linking, object-oriented programming, callable objects, namespaces, build types, and bare-metal cross-compilation. The project demonstrates my ability to organize technical knowledge, write reproducible C++ examples, and communicate low-level concepts clearly.
 
 ## 🔗 Links
 
