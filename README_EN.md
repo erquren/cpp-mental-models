@@ -9,11 +9,6 @@
 
 This repository serves as a modular learning and hands-on guide for C/C++. By leveraging minimal runnable examples, intuitive mental models (physical analogies), and a unified CMake build system, this project aims to demystify core language mechanics and underlying system-level principles.
 
-## 🔗 Links
-
-- **YouTube**: [安枫的叶](https://www.youtube.com/@%E5%AE%89%E6%9E%AB%E7%9A%84%E5%8F%B6)
-- **Bilibili**: [安枫的叶](https://b23.tv/DglKNYp)
-
 ## 💡 Design Philosophy
 
 The Tao of C++ lies not in accumulation, but in integration.
@@ -135,3 +130,6 @@ Feel free to star ⭐ this repository if you find it helpful!
 ## 📧 Contact
 
 If you have any questions or suggestions, please leave a comment on my YouTube or Bilibili videos.
+
+- **YouTube**: [安枫的叶](https://www.youtube.com/@%E5%AE%89%E6%9E%AB%E7%9A%84%E5%8F%B6)
+- **Bilibili**: [安枫的叶](https://b23.tv/DglKNYp)

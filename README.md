@@ -9,11 +9,6 @@
 
 本仓库是一个模块化的 C/C++ 学习与实践指南。本项目旨在通过可运行的精简示例、直观的心智模型（物理类比）以及统一的 CMake 构建系统，深度解析 C/C++ 的核心语言机制与系统级底层原理。
 
-## 🔗 链接
-
-- **YouTube**: [安枫的叶](https://www.youtube.com/@%E5%AE%89%E6%9E%AB%E7%9A%84%E5%8F%B6)
-- **Bilibili**: [安枫的叶](https://b23.tv/DglKNYp)
-
 ## 💡 设计理念
 
 C++ 之道，不在于多，而在于通。
@@ -131,3 +126,6 @@ cmake --build build
 ## 📧 联系方式
 
 如有任何问题或建议，欢迎在我的 YouTube 或 Bilibili 视频下留言。
+
+- **YouTube**: [安枫的叶](https://www.youtube.com/@%E5%AE%89%E6%9E%AB%E7%9A%84%E5%8F%B6)
+- **Bilibili**: [安枫的叶](https://b23.tv/DglKNYp)
