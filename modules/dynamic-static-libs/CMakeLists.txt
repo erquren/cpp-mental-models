@@ -10,6 +10,7 @@ foreach(CPP_FILE ${ROOT_SOURCE_FILES})
 
     set(TARGET_NAME "${MODULE_NAME}_${BASENAME}")
     add_executable(${TARGET_NAME} ${CPP_FILE})
+    add_demo_test(${TARGET_NAME})
 endforeach()
 
 file(GLOB DEMO_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/StaticDemo_*")
@@ -30,6 +31,7 @@ foreach(DEMO_DIR ${DEMO_DIRS})
 
     add_executable(${EXE_TARGET} ${EXE_SOURCE})
     target_link_libraries(${EXE_TARGET} ${LIB_TARGET})
+    add_demo_test(${EXE_TARGET})
 endforeach()
 
 file(GLOB DYNAMIC_DEMO_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/DynamicDemo_*")
@@ -50,4 +52,5 @@ foreach(DEMO_DIR ${DYNAMIC_DEMO_DIRS})
 
     add_executable(${EXE_TARGET} ${EXE_SOURCE})
     target_link_libraries(${EXE_TARGET} ${LIB_TARGET})
+    add_demo_test(${EXE_TARGET})
 endforeach()

@@ -9,4 +9,8 @@ foreach(CPP_FILE ${SOURCE_FILES})
     set(TARGET_NAME "${MODULE_NAME}_${BASENAME}")
     
     add_executable(${TARGET_NAME} ${CPP_FILE})
+    # main1 intentionally returns a + b, so it is not an exit-code smoke test.
+    if(NOT TARGET_NAME STREQUAL "${MODULE_NAME}_main1")
+        add_demo_test(${TARGET_NAME})
+    endif()
 endforeach()

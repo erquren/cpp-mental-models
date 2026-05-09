@@ -16,6 +16,7 @@ target_include_directories(${LIB_V1_TARGET} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/l
 
 add_executable(${APP_V1_TARGET} app_v1/main.cpp)
 target_link_libraries(${APP_V1_TARGET} PRIVATE ${LIB_V1_TARGET})
+add_demo_test(${APP_V1_TARGET})
 
 set(LIB_V2_TARGET "${MODULE_NAME}_MyLib_v2")
 set(APP_V2_TARGET "${MODULE_NAME}_app_v2")
@@ -25,6 +26,7 @@ target_include_directories(${LIB_V2_TARGET} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/l
 
 add_executable(${APP_V2_TARGET} app_v2/main.cpp)
 target_link_libraries(${APP_V2_TARGET} PRIVATE ${LIB_V2_TARGET})
+add_demo_test(${APP_V2_TARGET})
 
 file(GLOB MAIN_FILES "${CMAKE_CURRENT_SOURCE_DIR}/main*.cpp")
 
@@ -34,4 +36,5 @@ foreach(CPP_FILE ${MAIN_FILES})
     set(TARGET_NAME "${MODULE_NAME}_${BASENAME}")
     
     add_executable(${TARGET_NAME} ${CPP_FILE})
+    add_demo_test(${TARGET_NAME})
 endforeach()

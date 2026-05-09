@@ -14,6 +14,7 @@ foreach(DEMO_DIR ${DEMO_DIRS})
         if(SRC_FILES)
             add_executable(${TARGET_NAME} ${SRC_FILES} ${HEADER_FILES})
             target_include_directories(${TARGET_NAME} PRIVATE ${DEMO_DIR})
+            add_demo_test(${TARGET_NAME})
         endif()
 
     endif()

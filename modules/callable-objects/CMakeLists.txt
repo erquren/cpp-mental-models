@@ -8,4 +8,5 @@ foreach(CPP_FILE ${SOURCE_FILES})
     set(TARGET_NAME "${MODULE_NAME}_${BASENAME}")
     
     add_executable(${TARGET_NAME} ${CPP_FILE})
+    add_demo_test(${TARGET_NAME})
 endforeach()

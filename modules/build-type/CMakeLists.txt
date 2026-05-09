@@ -4,6 +4,9 @@
 include(FetchContent)
 
 # Eigen
+set(_BUILD_TESTING_SAVED ${BUILD_TESTING})
+set(BUILD_TESTING OFF CACHE BOOL "Disable tests in third-party dependencies" FORCE)
+
 FetchContent_Declare(
         eigen
         GIT_REPOSITORY https://gitlab.com/libeigen/eigen.git
@@ -21,6 +24,8 @@ FetchContent_Declare(
         GIT_TAG        v1.8.3
 )
 FetchContent_MakeAvailable(benchmark)
+
+set(BUILD_TESTING ${_BUILD_TESTING_SAVED} CACHE BOOL "Build project tests" FORCE)
 
 target_compile_options(benchmark PRIVATE -O3)
 target_compile_definitions(benchmark PRIVATE NDEBUG)
