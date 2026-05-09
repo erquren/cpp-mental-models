@@ -31,11 +31,11 @@ target_compile_definitions(benchmark_main PRIVATE NDEBUG)
 # Debug vs Release
 # ------------------------------------------
 add_executable(matrix_bench_debug matrix_bench.cpp)
-target_link_libraries(matrix_bench_debug PRIVATE eigen benchmark::benchmark benchmark::benchmark_main)
+target_link_libraries(matrix_bench_debug PRIVATE eigen benchmark::benchmark)
 target_compile_options(matrix_bench_debug PRIVATE -O0 -g -UNDEBUG)
 
 add_executable(matrix_bench_release matrix_bench.cpp)
-target_link_libraries(matrix_bench_release PRIVATE eigen benchmark::benchmark benchmark::benchmark_main)
+target_link_libraries(matrix_bench_release PRIVATE eigen benchmark::benchmark)
 target_compile_options(matrix_bench_release PRIVATE -O3 -march=native)
 target_compile_definitions(matrix_bench_release PRIVATE NDEBUG)
 
@@ -47,7 +47,7 @@ set(MATRIX_PROFILE_SOURCE matrix_build_profiles.cpp)
 
 # 1) Profile
 add_executable(matrix_profiles_profile ${MATRIX_PROFILE_SOURCE})
-target_link_libraries(matrix_profiles_profile PRIVATE eigen benchmark::benchmark benchmark::benchmark_main)
+target_link_libraries(matrix_profiles_profile PRIVATE eigen benchmark::benchmark)
 target_compile_options(matrix_profiles_profile PRIVATE
         -Wall -Wextra -Wpedantic
         -O2 -g -march=native
@@ -59,7 +59,7 @@ target_compile_definitions(matrix_profiles_profile PRIVATE
 
 # 2) FastRelease
 add_executable(matrix_profiles_fast ${MATRIX_PROFILE_SOURCE})
-target_link_libraries(matrix_profiles_fast PRIVATE eigen benchmark::benchmark benchmark::benchmark_main)
+target_link_libraries(matrix_profiles_fast PRIVATE eigen benchmark::benchmark)
 target_compile_options(matrix_profiles_fast PRIVATE
         -Wall -Wextra -Wpedantic
         -O3 -march=native
@@ -71,7 +71,7 @@ target_compile_definitions(matrix_profiles_fast PRIVATE
 
 # 3) MinSizeRelCustom
 add_executable(matrix_profiles_size ${MATRIX_PROFILE_SOURCE})
-target_link_libraries(matrix_profiles_size PRIVATE eigen benchmark::benchmark benchmark::benchmark_main)
+target_link_libraries(matrix_profiles_size PRIVATE eigen benchmark::benchmark)
 target_compile_options(matrix_profiles_size PRIVATE
         -Wall -Wextra -Wpedantic
         -Os
