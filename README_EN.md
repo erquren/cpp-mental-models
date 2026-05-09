@@ -109,6 +109,10 @@ cmake --build build
 ```
 
 
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
+
 
 ## ⭐ Star History
 
