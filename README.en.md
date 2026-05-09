@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 ![Platform](https://img.shields.io/badge/platform-linux%20%7C%20macOS-lightgrey)
 
-[中文版](README.md) | English
+[中文](README.md) | English
 
 This repository serves as a modular learning and hands-on guide for C/C++. By leveraging minimal runnable examples, intuitive mental models (physical analogies), and a unified CMake build system, this project aims to demystify core language mechanics and underlying system-level principles.
 
