@@ -50,6 +50,7 @@ This repository aims to assist learners in constructing a robust mental framewor
 | **smart-pointers** | Introduction to C++ smart pointers | memory-segmentation, move-semantics | [Link](https://www.youtube.com/watch?v=l1RRedJbk5k) | [Link](https://www.bilibili.com/video/BV1ajWyzXEpj) |
 | **callable-objects** | Evolution of callables: from C callbacks and functors to functional programming and universal references | move-semantics, type-aliases, dynamic-static-libs | [Link](https://www.youtube.com/watch?v=K2QZncoUdLk) | [Link](https://www.bilibili.com/video/BV1F8zNB1EZk) |
 | **namespaces** | Introduction to C++ namespaces | dynamic-static-libs | [Link](https://www.youtube.com/watch?v=n8uNKJSTyQc) | [Link](https://www.bilibili.com/video/BV1NTUpBoE59) |
+| **build-type** | Build type internals, engineering trade-offs, and the full bare-metal cross-compilation workflow | dynamic-static-libs | [Link](https://www.youtube.com/watch?v=n8uNKJSTyQc) | [Link](https://www.bilibili.com/video/BV1i7ofBNExr) |
 
 ---
 
@@ -59,7 +60,7 @@ For optimal learning experience, follow this suggested order:
 
 1. clockwise-spiral / memory-segmentation / move-semantics (can learn in any order)
 2. dynamic-static-libs / oop (can learn in any order)
-3. type-aliases / smart-pointers (can learn in any order)
+3. type-aliases / smart-pointers / build-type (can learn in any order)
 4. callable-objects / namespaces (can learn in any order)
 
 ## 🏗️ Project Structure 
@@ -70,8 +71,10 @@ This project uses a global CMake architecture, cleanly separating source code fr
 Cpp-Mental-Models/
 ├── CMakeLists.txt       # Global CMake config (Centralized C++ standards & output paths)
 ├── modules/             # Source code: Independent C++ topics aligned with video tutorials
-│   ├── Cpp_OOP/
-│   ├── MoveSemantic/
+│   ├── clockwise-spiral/
+│   ├── oop/
+│   ├── move-semantics/
+│   ├── build-type/
 │   └── ...
 ├── bin/                 # 📦 Generated after build: Unified output for all executables (Git ignored)
 └── lib/                 # 📦 Generated after build: Unified output for all libraries (Git ignored)
@@ -87,7 +90,7 @@ It is recommended to use **CLion** or **VS Code** (with the CMake Tools extensio
 
 1. Open the project **root directory** Cpp-Mental-Models using your IDE.
 2. The IDE will automatically detect and parse the **CMakeLists.txt** file in the root directory (If not triggered automatically, please manually reload the CMake project).
-3. Wait until the CMake parsing is completely finished. You can then open the source code of each module and directly click the green run button next to the main function to see the execution results. Alternatively, you can select a specific target with the module prefix (e.g., Cpp_OOP_demo1) from the Run/Debug Target drop-down menu and click Run.
+3. Wait until the CMake parsing is completely finished. You can then open the source code of each module and directly click the green run button next to the main function to see the execution results. Alternatively, you can select a specific target with the module prefix (e.g., `oop_demo1_inheritance_polymorphism`) from the Run/Debug Target drop-down menu and click Run.
 
 > **💡 Pro Tip**: Always run the code via the generated CMake Targets! Avoid using "single-file run" shortcuts next to the `main()` function, as they will bypass standard CMake linkage and cause `Undefined symbols` errors.
 
@@ -102,7 +105,7 @@ cmake -B build
 cmake --build build
 
 # 3. Run the specific executable
-./bin/Cpp_OOP_demo1_inheritance_polymorphism
+./bin/oop_demo1_inheritance_polymorphism
 ```
 
 

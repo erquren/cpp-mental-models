@@ -68,8 +68,10 @@ C++ 之道，不在于多，而在于通。
 Cpp-Mental-Models/
 ├── CMakeLists.txt       # 全局 CMake 配置（统一管控 C++ 标准与输出路径）
 ├── modules/             # 源码目录：按视频主题划分的独立 C++ 进阶代码
-│   ├── Cpp_OOP/
-│   ├── MoveSemantic/
+│   ├── clockwise-spiral/
+│   ├── oop/
+│   ├── move-semantics/
+│   ├── build-type/
 │   └── ...
 ├── bin/                 # 📦 编译后自动生成：集中存放所有可执行文件 (Git 忽略)
 └── lib/                 # 📦 编译后自动生成：集中存放所有动态/静态库 (Git 忽略)
@@ -85,7 +87,7 @@ Cpp-Mental-Models/
 
 1. 使用 IDE 打开项目**根目录** `Cpp-Mental-Models`。
 2. IDE 会自动识别并解析根目录下的 CMakeLists.txt 文件（若未自动触发，请手动重新加载 CMake 项目）。
-3. 等待 CMake 解析彻底完成后，进入各个模块 (modules) 的源码，直接点击 main 函数旁边的绿色运行按钮，即可查看运行结果。或在运行目标 (Target) 下拉菜单中，选择带有模块前缀的特定目标（例如 `Cpp_OOP_demo1`），点击运行即可。
+3. 等待 CMake 解析彻底完成后，进入各个模块 (modules) 的源码，直接点击 main 函数旁边的绿色运行按钮，即可查看运行结果。或在运行目标 (Target) 下拉菜单中，选择带有模块前缀的特定目标（例如 `oop_demo1_inheritance_polymorphism`），点击运行即可。
 
 > **💡 避坑提示**：请务必通过 CMake 目标列表运行代码！切勿点击单个 `.cpp` 文件旁边的快捷运行按钮，以免脱离 CMake 架构导致链接失败（如 `Undefined symbols` 报错）。
 
@@ -99,7 +101,7 @@ cmake -B build
 cmake --build build
 
 # 3. 运行指定的可执行文件
-./bin/Cpp_OOP_demo1_inheritance_polymorphism
+./bin/oop_demo1_inheritance_polymorphism
 ```
 
 
