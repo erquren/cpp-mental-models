@@ -7,7 +7,7 @@
 
 [中文](README.md) | English
 
-This repository serves as a modular learning and hands-on guide for C/C++. By leveraging minimal runnable examples, intuitive mental models (physical analogies), and a unified CMake build system, this project aims to demystify core language mechanics and underlying system-level principles.
+This repository is a modular learning and hands-on guide for C/C++, designed to demystify core language mechanics and underlying system-level principles through minimal runnable examples, intuitive mental models (physical analogies), and a unified CMake build system.
 
 ## 💡 Design Philosophy
 
